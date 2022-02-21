@@ -1,0 +1,254 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "File", {
+  enumerable: true,
+  get: function () {
+    return _file.default;
+  }
+});
+Object.defineProperty(exports, "buildExternalHelpers", {
+  enumerable: true,
+  get: function () {
+    return _buildExternalHelpers.default;
+  }
+});
+Object.defineProperty(exports, "resolvePlugin", {
+  enumerable: true,
+  get: function () {
+    return _files.resolvePlugin;
+  }
+});
+Object.defineProperty(exports, "resolvePreset", {
+  enumerable: true,
+  get: function () {
+    return _files.resolvePreset;
+  }
+});
+Object.defineProperty(exports, "getEnv", {
+  enumerable: true,
+  get: function () {
+    return _environment.getEnv;
+  }
+});
+Object.defineProperty(exports, "tokTypes", {
+  enumerable: true,
+  get: function () {
+    return _parser().tokTypes;
+  }
+});
+Object.defineProperty(exports, "traverse", {
+  enumerable: true,
+  get: function () {
+    return _traverse().default;
+  }
+});
+Object.defineProperty(exports, "template", {
+  enumerable: true,
+  get: function () {
+    return _template().default;
+  }
+});
+Object.defineProperty(exports, "createConfigItem", {
+  enumerable: true,
+  get: function () {
+    return _config.createConfigItem;
+  }
+});
+Object.defineProperty(exports, "createConfigItemSync", {
+  enumerable: true,
+  get: function () {
+    return _config.createConfigItemSync;
+  }
+});
+Object.defineProperty(exports, "createConfigItemAsync", {
+  enumerable: true,
+  get: function () {
+    return _config.createConfigItemAsync;
+  }
+});
+Object.defineProperty(exports, "loadPartialConfig", {
+  enumerable: true,
+  get: function () {
+    return _config.loadPartialConfig;
+  }
+});
+Object.defineProperty(exports, "loadPartialConfigSync", {
+  enumerable: true,
+  get: function () {
+    return _config.loadPartialConfigSync;
+  }
+});
+Object.defineProperty(exports, "loadPartialConfigAsync", {
+  enumerable: true,
+  get: function () {
+    return _config.loadPartialConfigAsync;
+  }
+});
+Object.defineProperty(exports, "loadOptions", {
+  enumerable: true,
+  get: function () {
+    return _config.loadOptions;
+  }
+});
+Object.defineProperty(exports, "loadOptionsSync", {
+  enumerable: true,
+  get: function () {
+    return _config.loadOptionsSync;
+  }
+});
+Object.defineProperty(exports, "loadOptionsAsync", {
+  enumerable: true,
+  get: function () {
+    return _config.loadOptionsAsync;
+  }
+});
+Object.defineProperty(exports, "transform", {
+  enumerable: true,
+  get: function () {
+    return _transform.transform;
+  }
+});
+Object.defineProperty(exports, "transformSync", {
+  enumerable: true,
+  get: function () {
+    return _transform.transformSync;
+  }
+});
+Object.defineProperty(exports, "transformAsync", {
+  enumerable: true,
+  get: function () {
+    return _transform.transformAsync;
+  }
+});
+Object.defineProperty(exports, "transformFile", {
+  enumerable: true,
+  get: function () {
+    return _transformFile.transformFile;
+  }
+});
+Object.defineProperty(exports, "transformFileSync", {
+  enumerable: true,
+  get: function () {
+    return _transformFile.transformFileSync;
+  }
+});
+Object.defineProperty(exports, "transformFileAsync", {
+  enumerable: true,
+  get: function () {
+    return _transformFile.transformFileAsync;
+  }
+});
+Object.defineProperty(exports, "transformFromAst", {
+  enumerable: true,
+  get: function () {
+    return _transformAst.transformFromAst;
+  }
+});
+Object.defineProperty(exports, "transformFromAstSync", {
+  enumerable: true,
+  get: function () {
+    return _transformAst.transformFromAstSync;
+  }
+});
+Object.defineProperty(exports, "transformFromAstAsync", {
+  enumerable: true,
+  get: function () {
+    return _transformAst.transformFromAstAsync;
+  }
+});
+Object.defineProperty(exports, "parse", {
+  enumerable: true,
+  get: function () {
+    return _parse.parse;
+  }
+});
+Object.defineProperty(exports, "parseSync", {
+  enumerable: true,
+  get: function () {
+    return _parse.parseSync;
+  }
+});
+Object.defineProperty(exports, "parseAsync", {
+  enumerable: true,
+  get: function () {
+    return _parse.parseAsync;
+  }
+});
+export const types = exports.OptionManager = exports.DEFAULT_EXTENSIONS = exports.version = void 0;
+
+import _file from './transformation/file/file';
+import _buildExternalHelpers from './tools/build-external-helpers';
+import _files from './config/files';
+import _environment from './config/helpers/environment';
+
+function _types() {
+  const data = require("@babel/types");
+
+  _types = function () {
+    return data;
+  };
+
+  return data;
+}
+
+Object.defineProperty(exports, "types", {
+  enumerable: true,
+  get: function () {
+    return _types();
+  }
+});
+
+function _parser() {
+  const data = require("@babel/parser");
+
+  _parser = function () {
+    return data;
+  };
+
+  return data;
+}
+
+function _traverse() {
+  const data = require("@babel/traverse");
+
+  _traverse = function () {
+    return data;
+  };
+
+  return data;
+}
+
+function _template() {
+  const data = require("@babel/template");
+
+  _template = function () {
+    return data;
+  };
+
+  return data;
+}
+
+import _config from './config';
+import _transform from './transform';
+import _transformFile from './transform-file';
+import _transformAst from './transform-ast';
+import _parse from './parse';
+
+const version = "7.15.5";
+const DEFAULT_EXTENSIONS = Object.freeze([".js", ".jsx", ".es6", ".es", ".mjs", ".cjs"]);
+
+class OptionManager {
+  init(opts) {
+    return (0, _config.loadOptions)(opts);
+  }
+
+}
+
+export { Plugin, version, DEFAULT_EXTENSIONS, OptionManager };
+
+function Plugin(alias) {
+  throw new Error(`The (${alias}) Babel 5 plugin is being run with an unsupported Babel version.`);
+}

@@ -1,0 +1,152 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+export const minVersions = exports.default = void 0;
+
+import _pluginSyntaxAsyncGenerators from '@babel/plugin-syntax-async-generators';
+import _pluginSyntaxClassProperties from '@babel/plugin-syntax-class-properties';
+import _pluginSyntaxClassStaticBlock from '@babel/plugin-syntax-class-static-block';
+import _pluginSyntaxDynamicImport from '@babel/plugin-syntax-dynamic-import';
+import _pluginSyntaxExportNamespaceFrom from '@babel/plugin-syntax-export-namespace-from';
+import _pluginSyntaxJsonStrings from '@babel/plugin-syntax-json-strings';
+import _pluginSyntaxLogicalAssignmentOperators from '@babel/plugin-syntax-logical-assignment-operators';
+import _pluginSyntaxNullishCoalescingOperator from '@babel/plugin-syntax-nullish-coalescing-operator';
+import _pluginSyntaxNumericSeparator from '@babel/plugin-syntax-numeric-separator';
+import _pluginSyntaxObjectRestSpread from '@babel/plugin-syntax-object-rest-spread';
+import _pluginSyntaxOptionalCatchBinding from '@babel/plugin-syntax-optional-catch-binding';
+import _pluginSyntaxOptionalChaining from '@babel/plugin-syntax-optional-chaining';
+import _pluginSyntaxPrivatePropertyInObject from '@babel/plugin-syntax-private-property-in-object';
+import _pluginSyntaxTopLevelAwait from '@babel/plugin-syntax-top-level-await';
+import _pluginProposalAsyncGeneratorFunctions from '@babel/plugin-proposal-async-generator-functions';
+import _pluginProposalClassProperties from '@babel/plugin-proposal-class-properties';
+import _pluginProposalClassStaticBlock from '@babel/plugin-proposal-class-static-block';
+import _pluginProposalDynamicImport from '@babel/plugin-proposal-dynamic-import';
+import _pluginProposalExportNamespaceFrom from '@babel/plugin-proposal-export-namespace-from';
+import _pluginProposalJsonStrings from '@babel/plugin-proposal-json-strings';
+import _pluginProposalLogicalAssignmentOperators from '@babel/plugin-proposal-logical-assignment-operators';
+import _pluginProposalNullishCoalescingOperator from '@babel/plugin-proposal-nullish-coalescing-operator';
+import _pluginProposalNumericSeparator from '@babel/plugin-proposal-numeric-separator';
+import _pluginProposalObjectRestSpread from '@babel/plugin-proposal-object-rest-spread';
+import _pluginProposalOptionalCatchBinding from '@babel/plugin-proposal-optional-catch-binding';
+import _pluginProposalOptionalChaining from '@babel/plugin-proposal-optional-chaining';
+import _pluginProposalPrivateMethods from '@babel/plugin-proposal-private-methods';
+import _pluginProposalPrivatePropertyInObject from '@babel/plugin-proposal-private-property-in-object';
+import _pluginProposalUnicodePropertyRegex from '@babel/plugin-proposal-unicode-property-regex';
+import _pluginTransformAsyncToGenerator from '@babel/plugin-transform-async-to-generator';
+import _pluginTransformArrowFunctions from '@babel/plugin-transform-arrow-functions';
+import _pluginTransformBlockScopedFunctions from '@babel/plugin-transform-block-scoped-functions';
+import _pluginTransformBlockScoping from '@babel/plugin-transform-block-scoping';
+import _pluginTransformClasses from '@babel/plugin-transform-classes';
+import _pluginTransformComputedProperties from '@babel/plugin-transform-computed-properties';
+import _pluginTransformDestructuring from '@babel/plugin-transform-destructuring';
+import _pluginTransformDotallRegex from '@babel/plugin-transform-dotall-regex';
+import _pluginTransformDuplicateKeys from '@babel/plugin-transform-duplicate-keys';
+import _pluginTransformExponentiationOperator from '@babel/plugin-transform-exponentiation-operator';
+import _pluginTransformForOf from '@babel/plugin-transform-for-of';
+import _pluginTransformFunctionName from '@babel/plugin-transform-function-name';
+import _pluginTransformLiterals from '@babel/plugin-transform-literals';
+import _pluginTransformMemberExpressionLiterals from '@babel/plugin-transform-member-expression-literals';
+import _pluginTransformModulesAmd from '@babel/plugin-transform-modules-amd';
+import _pluginTransformModulesCommonjs from '@babel/plugin-transform-modules-commonjs';
+import _pluginTransformModulesSystemjs from '@babel/plugin-transform-modules-systemjs';
+import _pluginTransformModulesUmd from '@babel/plugin-transform-modules-umd';
+import _pluginTransformNamedCapturingGroupsRegex from '@babel/plugin-transform-named-capturing-groups-regex';
+import _pluginTransformNewTarget from '@babel/plugin-transform-new-target';
+import _pluginTransformObjectSuper from '@babel/plugin-transform-object-super';
+import _pluginTransformParameters from '@babel/plugin-transform-parameters';
+import _pluginTransformPropertyLiterals from '@babel/plugin-transform-property-literals';
+import _pluginTransformRegenerator from '@babel/plugin-transform-regenerator';
+import _pluginTransformReservedWords from '@babel/plugin-transform-reserved-words';
+import _pluginTransformShorthandProperties from '@babel/plugin-transform-shorthand-properties';
+import _pluginTransformSpread from '@babel/plugin-transform-spread';
+import _pluginTransformStickyRegex from '@babel/plugin-transform-sticky-regex';
+import _pluginTransformTemplateLiterals from '@babel/plugin-transform-template-literals';
+import _pluginTransformTypeofSymbol from '@babel/plugin-transform-typeof-symbol';
+import _pluginTransformUnicodeEscapes from '@babel/plugin-transform-unicode-escapes';
+import _pluginTransformUnicodeRegex from '@babel/plugin-transform-unicode-regex';
+import _transformAsyncArrowsInClass from '@babel/preset-modules/lib/plugins/transform-async-arrows-in-class';
+import _transformEdgeDefaultParameters from '@babel/preset-modules/lib/plugins/transform-edge-default-parameters';
+import _transformEdgeFunctionName from '@babel/preset-modules/lib/plugins/transform-edge-function-name';
+import _transformTaggedTemplateCaching from '@babel/preset-modules/lib/plugins/transform-tagged-template-caching';
+import _transformSafariBlockShadowing from '@babel/preset-modules/lib/plugins/transform-safari-block-shadowing';
+import _transformSafariForShadowing from '@babel/preset-modules/lib/plugins/transform-safari-for-shadowing';
+import _pluginBugfixV8SpreadParametersInOptionalChaining from '@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining';
+
+var _default = {
+  "bugfix/transform-async-arrows-in-class": () => _transformAsyncArrowsInClass,
+  "bugfix/transform-edge-default-parameters": () => _transformEdgeDefaultParameters,
+  "bugfix/transform-edge-function-name": () => _transformEdgeFunctionName,
+  "bugfix/transform-safari-block-shadowing": () => _transformSafariBlockShadowing,
+  "bugfix/transform-safari-for-shadowing": () => _transformSafariForShadowing,
+  "bugfix/transform-tagged-template-caching": () => _transformTaggedTemplateCaching,
+  "bugfix/transform-v8-spread-parameters-in-optional-chaining": () => _pluginBugfixV8SpreadParametersInOptionalChaining.default,
+  "proposal-async-generator-functions": () => _pluginProposalAsyncGeneratorFunctions.default,
+  "proposal-class-properties": () => _pluginProposalClassProperties.default,
+  "proposal-class-static-block": () => _pluginProposalClassStaticBlock.default,
+  "proposal-dynamic-import": () => _pluginProposalDynamicImport.default,
+  "proposal-export-namespace-from": () => _pluginProposalExportNamespaceFrom.default,
+  "proposal-json-strings": () => _pluginProposalJsonStrings.default,
+  "proposal-logical-assignment-operators": () => _pluginProposalLogicalAssignmentOperators.default,
+  "proposal-nullish-coalescing-operator": () => _pluginProposalNullishCoalescingOperator.default,
+  "proposal-numeric-separator": () => _pluginProposalNumericSeparator.default,
+  "proposal-object-rest-spread": () => _pluginProposalObjectRestSpread.default,
+  "proposal-optional-catch-binding": () => _pluginProposalOptionalCatchBinding.default,
+  "proposal-optional-chaining": () => _pluginProposalOptionalChaining.default,
+  "proposal-private-methods": () => _pluginProposalPrivateMethods.default,
+  "proposal-private-property-in-object": () => _pluginProposalPrivatePropertyInObject.default,
+  "proposal-unicode-property-regex": () => _pluginProposalUnicodePropertyRegex.default,
+  "syntax-async-generators": () => _pluginSyntaxAsyncGenerators,
+  "syntax-class-properties": () => _pluginSyntaxClassProperties,
+  "syntax-class-static-block": () => _pluginSyntaxClassStaticBlock,
+  "syntax-dynamic-import": () => _pluginSyntaxDynamicImport,
+  "syntax-export-namespace-from": () => _pluginSyntaxExportNamespaceFrom,
+  "syntax-json-strings": () => _pluginSyntaxJsonStrings,
+  "syntax-logical-assignment-operators": () => _pluginSyntaxLogicalAssignmentOperators,
+  "syntax-nullish-coalescing-operator": () => _pluginSyntaxNullishCoalescingOperator,
+  "syntax-numeric-separator": () => _pluginSyntaxNumericSeparator,
+  "syntax-object-rest-spread": () => _pluginSyntaxObjectRestSpread,
+  "syntax-optional-catch-binding": () => _pluginSyntaxOptionalCatchBinding,
+  "syntax-optional-chaining": () => _pluginSyntaxOptionalChaining,
+  "syntax-private-property-in-object": () => _pluginSyntaxPrivatePropertyInObject,
+  "syntax-top-level-await": () => _pluginSyntaxTopLevelAwait,
+  "transform-arrow-functions": () => _pluginTransformArrowFunctions.default,
+  "transform-async-to-generator": () => _pluginTransformAsyncToGenerator.default,
+  "transform-block-scoped-functions": () => _pluginTransformBlockScopedFunctions.default,
+  "transform-block-scoping": () => _pluginTransformBlockScoping.default,
+  "transform-classes": () => _pluginTransformClasses.default,
+  "transform-computed-properties": () => _pluginTransformComputedProperties.default,
+  "transform-destructuring": () => _pluginTransformDestructuring.default,
+  "transform-dotall-regex": () => _pluginTransformDotallRegex.default,
+  "transform-duplicate-keys": () => _pluginTransformDuplicateKeys.default,
+  "transform-exponentiation-operator": () => _pluginTransformExponentiationOperator.default,
+  "transform-for-of": () => _pluginTransformForOf.default,
+  "transform-function-name": () => _pluginTransformFunctionName.default,
+  "transform-literals": () => _pluginTransformLiterals.default,
+  "transform-member-expression-literals": () => _pluginTransformMemberExpressionLiterals.default,
+  "transform-modules-amd": () => _pluginTransformModulesAmd.default,
+  "transform-modules-commonjs": () => _pluginTransformModulesCommonjs.default,
+  "transform-modules-systemjs": () => _pluginTransformModulesSystemjs.default,
+  "transform-modules-umd": () => _pluginTransformModulesUmd.default,
+  "transform-named-capturing-groups-regex": () => _pluginTransformNamedCapturingGroupsRegex.default,
+  "transform-new-target": () => _pluginTransformNewTarget.default,
+  "transform-object-super": () => _pluginTransformObjectSuper.default,
+  "transform-parameters": () => _pluginTransformParameters.default,
+  "transform-property-literals": () => _pluginTransformPropertyLiterals.default,
+  "transform-regenerator": () => _pluginTransformRegenerator.default,
+  "transform-reserved-words": () => _pluginTransformReservedWords.default,
+  "transform-shorthand-properties": () => _pluginTransformShorthandProperties.default,
+  "transform-spread": () => _pluginTransformSpread.default,
+  "transform-sticky-regex": () => _pluginTransformStickyRegex.default,
+  "transform-template-literals": () => _pluginTransformTemplateLiterals.default,
+  "transform-typeof-symbol": () => _pluginTransformTypeofSymbol.default,
+  "transform-unicode-escapes": () => _pluginTransformUnicodeEscapes.default,
+  "transform-unicode-regex": () => _pluginTransformUnicodeRegex.default
+};
+export const default = _default;
+const minVersions = {
+  "proposal-class-static-block": "7.12.0",
+  "proposal-private-property-in-object": "7.10.0"
+};
+export { minVersions };
